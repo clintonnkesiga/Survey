@@ -1,12 +1,15 @@
 import {createStore} from "vuex";
 import axiosClient from "../axios";
 
+const tmpSurveys = [];
+
 const store = createStore({
   state: {
     user: {
       data: {},
       token: sessionStorage.getItem("TOKEN"),
-    }
+    },
+    surveys: [...tmpSurveys],
   },
   getters: {},
   actions: {
